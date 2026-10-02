@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Website</title>
+  <style>
+    body {
+      background-color: #1e293b; /* Dark navy background */
+      color: #f3f4f6;            /* Off-white text */
+      font-family: sans-serif;
+    }
+    h1 {
+      color: #38bdf8;            /* Accent color for text */
+    }
+    /* Target class="card" using a dot (.) */
+    .card {
+      background-color: #0f172a;  /* Darker background for the card */
+      padding: 24px;              /* Internal spacing */
+      border-radius: 12px;        /* Soft rounded corners */
+      max-width: 500px;           /* Limit width on large screens */
+      margin: 50px auto;          /* Center horizontally with top/bottom space */
+    }
+  </style>
+</head>
+<body>
+  <!-- The card container wraps all visual content -->
+  <div class="card">
+    <h1>My First Website</h1>
+    <p>This is just a test website, there's not really much going on here.</p>
+    <p>These are my favourite hobbies:</p>
+    <ul>
+      <li>play videogames</li>
+      <li>programming</li>
+    </ul>
+    <button id="theme-btn">Toggle Theme</button>
+  </div>
+  <script>
+    const button1 = document.querySelector('#theme-btn')
+    button1.addEventListener("click", function(){
+      document.body.style.backgroundColor = "#0284c7"
+    })
+  </script>
+</body>
+</html>
