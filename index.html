@@ -6,40 +6,47 @@
   <title>My First Website</title>
   <style>
     body {
-      background-color: #1e293b; /* Dark navy background */
-      color: #f3f4f6;            /* Off-white text */
+      background-color: #1e293b;
       font-family: sans-serif;
     }
     h1 {
-      color: #38bdf8;            /* Accent color for text */
+      color: #38bdf8;
     }
-    /* Target class="card" using a dot (.) */
     .card {
-      background-color: #0f172a;  /* Darker background for the card */
-      padding: 24px;              /* Internal spacing */
-      border-radius: 12px;        /* Soft rounded corners */
-      max-width: 500px;           /* Limit width on large screens */
-      margin: 50px auto;          /* Center horizontally with top/bottom space */
+    background-color: #334155;
+    color: #f3f4f6;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 50px auto;
+    }
+    #btn {
+      padding: 10px 16px;
+      background-color: #38bdf8;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- The card container wraps all visual content -->
   <div class="card">
     <h1>My First Website</h1>
     <p>This is just a test website, there's not really much going on here.</p>
     <p>These are my favourite hobbies:</p>
     <ul>
-      <li>play videogames</li>
+      <li>play videogames;</li>
       <li>programming</li>
     </ul>
-    <button id="theme-btn">Toggle Theme</button>
+    <button id="btn">Click Me!</button>
+    <p id="output"></p>
   </div>
   <script>
-    const button1 = document.querySelector('#theme-btn')
-    button1.addEventListener("click", function(){
-      document.body.style.backgroundColor = "#0284c7"
-    })
+    const button = document.querySelector("#btn")
+    const output = document.querySelector("#output")
+    button.addEventListener("click", function() {
+      output.textContent = "Hello from JavaScript!"
+    });
   </script>
 </body>
 </html>
